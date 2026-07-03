@@ -190,3 +190,56 @@ nav a:hover {
 #education{
   margin-top: 30px;
 }
+
+.edtech{
+  position: relative;
+  margin-top: 20px;
+}
+.year{
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  margin-bottom: 5px;
+}
+
+.degree{
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.college{
+  font-style: italic;
+  color: #a0a0a0;
+  margin-bottom: 10px;
+}
+
+.work{
+  color: #a0a0a0;
+}
+.edfirst,.edsecond{
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.goal{
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 3px solid #ffbf00;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  z-index: 5;
+}
+
+.liner{
+  position: absolute;
+  width: 2px;
+  top: 0px;
+  left: 5px;
+  bottom: 0px;
+  border: 2px solid #3a3a3a;
+}
+
+/* Portfolio */
