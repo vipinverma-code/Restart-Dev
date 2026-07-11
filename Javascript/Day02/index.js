@@ -61,3 +61,40 @@ const id1= Symbol("id");
 console.log(id1);
 const id2= Symbol("id");
 console.log(id2);
+
+// non-primitive data type
+// array
+
+let arr=[10,20,"Vipin",3.5];
+console.log(arr);
+
+// object
+
+let details={
+    name:"Vipin Verma",
+    age: 22,
+    profession: "Frontend Developer",
+    category: "obc"
+}
+
+console.log(details);
+
+// function
+
+function add(a,b){
+    return a+b;
+}
+console.log(add(25,28));
+console.log(typeof(add));
+
+// Primitive data types are immutable 
+
+let str="Ankit";
+str[0]="V";
+console.log(str);
+
+// Non-Primitive data types are mutable
+
+const arr1=[1,2,3,"Vipin","Ankit"];
+arr1[3]="Vanshika";
+console.log(arr1);
