@@ -86,18 +86,54 @@ for(let i=0; i<10; i++ ){
 
 // do while loop
 
-let i=0;
-do{
-    console.log(i);
-    i++;
-}while(i<10);
+// let i=0;
+// do{
+//     console.log(i);
+//     i++;
+// }while(i<10);
 
 // if-else condition
 
-let age=18;
-if(age>=18){
-    console.log("you are eligible to vote");
+// let age=18;
+// if(age>=18){
+//     console.log("you are eligible to vote");
+// }
+// else{
+//     console.log("not eligible to vote");
+// }
+
+// kid ,young, and ,old
+
+let age=45;
+if(age<18){
+    console.log("kid");
+}
+else if(age>=60){
+    console.log("Old");
 }
 else{
-    console.log("not eligible to vote");
+    console.log("young")
 }
+// Logical opeartor
+// && , ||
+console.log(true && true);
+console.log(true && false);
+console.log(false && true);
+console.log(false && false);
+// ||opeartor
+console.log(true || true);
+console.log(true || false);
+console.log(false || true);
+console.log(false || false);
+
+let t=20;
+let u=25;
+console.log(t&&u);
+console.log(t||u);
+// && if first value is true it will give output second,if first value is false it will give first value itself
+
+
+// AND: &,| or
+
+console.log(2&5);
+// ye bitwise operator hai isme hme binary form me convert krke and or operation perform krne honge
