@@ -65,3 +65,39 @@ console.log("Rohit">"Mohit");
 console.log(10=="10");
 console.log(NaN === NaN);
 console.log(NaN == NaN);
+
+// loop kaise kaam krte hai.
+// for loop
+
+for(let i=0; i<10; i++ ){
+    console.log(i)
+}
+
+// for(let i=10; i>0; i--){
+//     console.log(i)
+// }
+
+// while loop
+// let i=0;
+// while(i<10){
+//     console.log(i);
+//     i+=1;
+// }
+
+// do while loop
+
+let i=0;
+do{
+    console.log(i);
+    i++;
+}while(i<10);
+
+// if-else condition
+
+let age=18;
+if(age>=18){
+    console.log("you are eligible to vote");
+}
+else{
+    console.log("not eligible to vote");
+}
