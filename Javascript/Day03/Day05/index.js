@@ -40,17 +40,17 @@ console.log(Boolean(null));
 // 15-25
 // formula:- Math.floor(Math.random()*(max-min+1)+min
 
-console.log(Math.floor((Math.random()*11)+15));
+// console.log(Math.floor((Math.random()*11)+15));
 
 // used for otp generate
 // 1000-9999
-console.log(Math.floor(Math.random()*(9999-1000 +1)+1000));
+// console.log(Math.floor(Math.random()*(9999-1000 +1)+1000));
 // function to generate random number
-function random() {
-    for(let i=0; i<0.99999;i++){
-        console.log(i);
-    } 
+function random(min,max) {
+    return Math.floor(Math.random()*(max-min +1)+ min);
+ 
 }
-random();
-
+let otp=random(1000,9999);
+console.log(otp);
+// is baar jo value return hogi usko baad me hm use bhi kr skste hai function ke bahar
 
