@@ -32,3 +32,24 @@ console.log(str.includes('curr'));
 
 console.log(str.slice(2,9));
 console.log(str.slice(3));
+// negative indices
+console.log(str.slice(-4));
+console.log(str.slice(-4,-2));
+// when ending index not given , it retruns the whole string
+
+// substring method
+console.log(str.substring(2,5));
+console.log(str.substring(-4));  
+// negative indices support nhi krta hai
+
+// concatenation of string
+
+const a="Vipin";
+const b="Verma";
+const c= a+" "+b;
+console.log(c);
+console.log(24+"Rohit");
+// Replace method;
+
+const str1="We do not loose hope , we try to figure out everyday";
+console.log(str1.replace("figure","figureit"));
