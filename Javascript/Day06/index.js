@@ -24,14 +24,12 @@ console.log(str.lastIndexOf("curr"));
 console.log(str.includes('curr'));
 // slice method
 // ending index not included
-
 console.log(str.slice(2,9));
 console.log(str.slice(3));
 // negative indices
 console.log(str.slice(-4));
 console.log(str.slice(-4,-2));
 // when ending index not given , it retruns the whole string
-
 // substring method
 console.log(str.substring(2,5));
 console.log(str.substring(-4));  
@@ -49,10 +47,8 @@ console.log(str1.replace("figure","figureit"));
 // trim() method
 // const user=" Vipin Verma ";
 // console.log(user.trimStart());
-
 // const names="Rohit,Mohit,Surya,Vijay,Animesh, Ankit";
 // console.log(names.split(","));
-
 // Dates
 const today= new Date();
 // console.log(now);
@@ -75,7 +71,6 @@ console.log(today.getSeconds());
 const now = Date.now();
 const dates = new Date(1784139051238);
 console.log(dates);
-
 
 
 
