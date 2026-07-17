@@ -49,13 +49,32 @@
 // console.log(array2);
 
 // Slice method in array
-const arr=[10,30,50,90,11];
-const arr2 = arr.slice(2,4);
-console.log(arr2);
+// const arr=[10,30,50,90,11];
+// const arr2 = arr.slice(2,4);
+// console.log(arr2);
 // new array bnega ,original array me koi change nhi aayega
-
 // original array se koi part trim krane ke liye splice method ka use krte hai
-const arr3=arr.splice(1,3,"Rohit",89);
+// const arr3=arr.splice(1,3,"Rohit",89);
+// console.log(arr3);
+// console.log(arr);
+
+// Spread opeartor
+
+const arr=[10,30,50,90,11];
+const arr2=["Rohit",11,true];
+// arr.push(arr2);
+// const arr3=arr.concat(arr2);
+// console.log(arr3);
+
+// spread operator
+
+const arr3=[...arr,...arr2];
 console.log(arr3);
 
-// console.log(arr);
+// Array to String
+const names=["Alice","Bob","Charlie"];
+// console.log(names.toString());
+// join opeartion
+console.log(names.join(" "));
+// console.log(names.indexOf("Alice"));
+// console.log(names.includes("Bob"));
