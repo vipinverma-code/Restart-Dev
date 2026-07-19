@@ -98,3 +98,12 @@ const n=[10,40,31,71,5,11];
 // for descending order
 n.sort((a,b)=> b-a);
 console.log(n);
+
+// flattening the array
+const array4=[10,30,50,[40,90,[60,19,99],11,80]];
+console.log(array4);
+// 2-d array
+console.log(array4[3][1]); 
+// 3-d array
+console.log(array4[3][2][1]);
+console.log(array4.flat(1));
