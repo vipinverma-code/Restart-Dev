@@ -72,9 +72,29 @@ const arr3=[...arr,...arr2];
 console.log(arr3);
 
 // Array to String
-const names=["Alice","Bob","Charlie"];
+const names=["alice", "Rohit","Bob","Mohit","Charlie"];
 // console.log(names.toString());
 // join opeartion
 console.log(names.join(" "));
 // console.log(names.indexOf("Alice"));
 // console.log(names.includes("Bob"));
+// Now learn to sort the array
+console.log(names.sort());
+console.log(names.reverse());
+
+// const a=[101,90,80,32,91];
+// a.sort();
+// console.log(a);
+// const array5=["Vipin",900,600,"Sanskar"];
+// console.log(array5.sort());
+
+const n=[10,40,31,71,5,11];
+// n.sort((a,b)=>a-b);
+// for ascending order
+// console.log(n);
+// -ve: pehle a aayega fr b aayega
+// +ve: b aayega fr a ayega
+
+// for descending order
+n.sort((a,b)=> b-a);
+console.log(n);
