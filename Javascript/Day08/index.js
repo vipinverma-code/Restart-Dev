@@ -11,9 +11,9 @@ const user={
 // console.log(typeof user);
 // // for accessing the elements of object with their key value
 // console.log(user.name);
-console.log(user["name"]);
-console.log(user["amount"]);
-console.log(user["home address"]);
+// console.log(user["name"]);
+// console.log(user["amount"]);
+// console.log(user["home address"]);
 
 // CRUD operation: Create read Update ANd Delete
 
@@ -24,3 +24,12 @@ console.log(user["home address"]);
 // delete
 // delete user.emailId;
 // console.log(user);
+
+const user2=user;
+// same ouput because of copy by reference
+user2.age=90;
+console.log(user);
+// return all only keys of object
+console.log(Object.keys(user));
+console.log(Object.values(user));
+console.log(Object.entries(user));
