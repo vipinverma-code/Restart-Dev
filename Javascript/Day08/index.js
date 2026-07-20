@@ -1,12 +1,12 @@
 // Object is a collection of key-value pairs
 // key value
-const user={
-    name:"Vipin",
-    age:20,
-    emailId:"vipinverma@gmail.com",
-    amount:350000,
-    "home address":"lmp"
-}
+// const user={
+//     name:"Vipin",
+//     age:20,
+//     emailId:"vipinverma@gmail.com",
+//     amount:350000,
+//     "home address":"lmp"
+// }
 // console.log(user);
 // console.log(typeof user);
 // // for accessing the elements of object with their key value
@@ -25,11 +25,30 @@ const user={
 // delete user.emailId;
 // console.log(user);
 
-const user2=user;
+// const user2=user;
 // same ouput because of copy by reference
-user2.age=90;
-console.log(user);
+// user2.age=90;
+// console.log(user);
 // return all only keys of object
-console.log(Object.keys(user));
-console.log(Object.values(user));
-console.log(Object.entries(user));
+// console.log(Object.keys(user));
+// console.log(Object.values(user));
+// console.log(Object.entries(user));
+
+// use of for in loop for find the keys and its values
+
+// for(let keys in user){
+//     console.log(keys,user[keys]);
+// }
+
+const user={
+    name:"Vipin",
+    age:20,
+    emailId:"vipinverma@gmail.com",
+    amount:350000,
+    "home address":"lmp"
+}
+
+const name=user.name;;
+const age=user.age;
+console.log(name);
+console.log(age);
