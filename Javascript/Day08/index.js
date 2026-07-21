@@ -151,10 +151,15 @@ const person={
     }
 }
 
-const person2={...person};
+// const person2={...person};
 // with the spread operator hm dono ki independent copy bna rhe hai
-person2.name="ankit";
-person2.address.city="allahabad";
+// person2.name="ankit";
+// person2.address.city="allahabad";
+// console.log(person2);
+// console.log(person);
+
+// deep copy
+const person2=structuredClone(person);
+person2.address.village="ambarsot";
 console.log(person2);
 console.log(person);
- 
