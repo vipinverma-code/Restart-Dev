@@ -48,7 +48,24 @@ const user={
     "home address":"lmp"
 }
 
-const name=user.name;;
-const age=user.age;
-console.log(name);
-console.log(age);
+// const name=user.name;;
+// const age=user.age;
+// console.log(name);
+// console.log(age);
+
+// Destructuring of Object
+const {name,age,amount,}=user;
+console.log(name,age,amount);
+// Destucturing of array
+const arr=[10,20,30,40];
+const [first,second]=arr;
+console.log(first,second);
+// use of for of loop to find the key and values of Object
+// for of loop array per lgta hai.
+for(let keys of Object.keys(user)){
+   console.log(keys);
+}
+
+for(let keys of Object.entries(user)){
+    console.log(keys);
+}
