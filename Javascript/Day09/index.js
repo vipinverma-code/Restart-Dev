@@ -58,14 +58,31 @@ const arr=[10,20,30,41,62];
 
 
 // arrow function
-const addNumber=(num1,num2)=>{
-    return num1+num2;
-}
-console.log(addNumber(80,96));
+// const addNumber=(num1,num2)=>{
+//     return num1+num2;
+// }
+// console.log(addNumber(80,96));
 
 // in arrow function if we return one thing there is no need to use the curly braces and write return
 
-const squareNumber=(n)=> n*n;
-console.log(squareNumber(5));
+// const squareNumber=(n)=> n*n;
+// console.log(squareNumber(5));
 
-// if we have single parameter , there is no need pf this ()
+// if we have single parameter , there is no need of this ()
+
+// const greeting=()=>{
+//     return{
+//         name:"Vipin",
+//         age:22,
+//     }
+// }
+// console.log(greeting().name);
+
+// const greeting=()=>({ name:"Vipin", age:22})
+// console.log(greeting());
+
+// IIFE
+
+(function greeting(){
+    console.log("Helloji");
+})();
