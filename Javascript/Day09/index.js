@@ -30,3 +30,42 @@ greet();
 // sum(9,5,6);
 // sum(9,2,34,5);
 
+// function sum(...num){
+//     let sum=0;
+//     for (let i=0; i<num.length;i++){
+//         sum=sum+num[i]; 
+//     }
+//     console.log(sum);
+// }
+// sum(6,8,9);
+
+// difference between spread and rest operator
+
+const arr=[10,20,30,41,62];
+// const [first,second,  ...num]=arr;
+// console.log(first,second,num);
+
+// function:expression
+// const addNumber=function(num1,num2){
+//     return num1+num2;
+// }
+// console.log(addNumber(3,4));
+
+// console.log(add(5,9));
+// function add(num1,num2){
+//     return num1+num2;
+// }
+
+
+// arrow function
+const addNumber=(num1,num2)=>{
+    return num1+num2;
+}
+console.log(addNumber(80,96));
+
+// in arrow function if we return one thing there is no need to use the curly braces and write return
+
+const squareNumber=(n)=> n*n;
+console.log(squareNumber(5));
+
+// if we have single parameter , there is no need pf this ()
