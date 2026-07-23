@@ -1,11 +1,11 @@
 // function
 
 // function declaration
-function greet(){
-    console.log("Congrats!, you are a frontend developer");
-}
+// function greet(){
+//     console.log("Congrats!, you are a frontend developer");
+// }
 // function calling
-greet();
+// greet();
 
 // function for adding two add numbers
 // parameters: variables declared in the function definition
@@ -83,6 +83,43 @@ const arr=[10,20,30,41,62];
 
 // IIFE
 
-(function greeting(){
-    console.log("Helloji");
-})();
+// (function greeting(){
+//     console.log("Helloji");
+// })();
+
+
+// Callback function
+function greet(){
+    console.log("Hello  Ji, Kaise ho")
+}
+
+function dance(){
+    console.log("I am dancing");
+}
+function meet(callback){
+    console.log("I am going to meet someone");
+    callback();
+    // aur code hota jisko mujhe execute krana hota 
+    console.log("I ahve finisjhed my work")
+}
+// meet(greet); 
+meet(dance);
+
+
+// callbackfunction example
+function zomatoOrderPlaced(){
+    console.log("We have strted preparing your food");
+}
+function blinkitOrderPlaced(){
+    console.log("We have started preparing your food");
+}
+function payment(amount,callback){
+    console.log(`${amount} has been initialized`);
+    console.log("payment is received");
+   callback();
+    
+    console.log("rider also received commission");
+}
+// payment(300,blinkitOrderPlaced);
+payment(200,zomatoOrderPlaced);
+
