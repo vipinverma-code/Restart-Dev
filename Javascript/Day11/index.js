@@ -35,22 +35,68 @@
 //     meet();
 // }
 // greet();
-function createCounter(){
-    let count= 0;
-    function increment(){
-        count++;
-           console.log("I am increment function");
-        return count;
+// function createCounter(){
+//     let count= 0;
+//     function increment(){
+//         count++;
+//            console.log("I am increment function");
+//         return count;
         // console.log("I am increment function");
-    }
-      return increment;
-}
+//     }
+//       return increment;
+// }
 
 // console.log(count);
-const counter=createCounter();
-console.log(counter());
+// const counter=createCounter();
+// console.log(counter());
+// console.log(counter())
 // count();
 
+// use of closure
+// closure ka mtlab hai ki inner function outer function ke variables ko yaad rkhta hai.
+// function outer(){
+//     let name="Vipin";
+//     function inner(){
+//         console.log(name);
+//     }
+//     return inner;
+// }
+// const result=outer();
+// result();
+
+// example of closure
+
+// function counter(){
+//     let x=0;
+//     function updatecounter(){
+//         x++;
+//         console.log(x);
+//     }
+//     return updatecounter;
+// }
+// const result1=counter();
+// result1();
+
+// function bankAccount(){
+//     let balance=1000;
+//     function deposit(amount){
+//         balance+=amount;
+//         console.log(balance);
+//     }
+//     return deposit;
+    
+// }
+// const account=bankAccount();
+// account(500);
 
 
+// examples of higher order function
 
+function double(){
+    function execute(){
+        console.log("hello");
+
+    }
+    return execute;
+}
+double();
