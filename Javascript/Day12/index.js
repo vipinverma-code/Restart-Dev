@@ -111,14 +111,48 @@ const products = [
 
 // use of reduce method to find the sum of numbers
 
-const arr=[10,30,56,89,56];
+// const arr=[10,30,56,89,56];
 // const sum= arr.reduce((accumulator,currentValue)=>{
 //     return accumulator+currentValue;
 // },0);
 // console.log(sum);
 
 // find the maximum number
-const max= arr.reduce((acc,num)=>{
-    return acc>num?acc:num;
-})
-console.log(max);
+// const max= arr.reduce((acc,num)=>{
+//     return acc>num?acc:num;
+// })
+// console.log(max);
+
+// Data Structure: set
+
+// it will give syntax error :unexpected number
+// const set={10,20,30,45,65};
+// console.log(set);
+
+// const arr=[12,34,5,6,8,9,8];
+// console.log(arr);
+// const s1= new Set(arr);
+// s1.add(10);
+// console.log(s1);
+// console.log(s1.has(34));
+// s1.delete(10);
+// console.log(s1);
+// s1.clear();
+// console.log(s1);
+
+
+// Remove the duplicate elements from the array
+const email=["ro@gm","ra@gm","mo@gm","ro@gm"];
+// convert into set
+// const s1=new Set(email);
+// console.log(s1);
+// convert into again array
+// const newEmail=[...new Set(email)];
+// console.log(newEmail);
+
+// now iteration over set
+
+// const s1=new Set(email);
+// for(let num of s1 ){
+//   console.log(num);
+// };
