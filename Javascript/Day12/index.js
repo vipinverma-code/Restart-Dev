@@ -97,13 +97,28 @@ const products = [
 // reduce method
 // accumulator=0, 
 // initial value=0;
-const result=products.reduce((accumulator,currentValue)=>{
-    return accumulator+currentValue.price;
-    if (currentValue.inStock){
-        return accumulator+currentValue.price;
-    }
-    else{
-        return accumulator;
-    }
-},0);
-console.log(result);
+// const result=products.reduce((accumulator,currentValue)=>{
+//     return accumulator+currentValue.price;
+//     if (currentValue.inStock){
+//         return accumulator+currentValue.price;
+//     }
+//     else{
+//         return accumulator;
+//     }
+// },0);
+// console.log(result);
+
+
+// use of reduce method to find the sum of numbers
+
+const arr=[10,30,56,89,56];
+// const sum= arr.reduce((accumulator,currentValue)=>{
+//     return accumulator+currentValue;
+// },0);
+// console.log(sum);
+
+// find the maximum number
+const max= arr.reduce((acc,num)=>{
+    return acc>num?acc:num;
+})
+console.log(max);
