@@ -156,3 +156,26 @@ const email=["ro@gm","ra@gm","mo@gm","ro@gm"];
 // for(let num of s1 ){
 //   console.log(num);
 // };
+
+// map data structure
+const m1 = new Map([
+  ["Rohit",40],
+  [2,"Rohit"],
+  [true,11],
+  [[10,30,11],"Mohit"]
+]);
+
+m1.set({name:"Vipin",age:22},false);
+// console.log(m1);
+// console.log(m1.has("Rohit"));
+// console.log(m1.get("Rohit"));
+// console.log(m1.clear());
+
+// iteration over the map
+
+for (let [keys,value] of m1){
+  console.log(keys,value);
+}
+
+
+
