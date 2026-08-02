@@ -105,3 +105,8 @@ const months=document.getElementById("month");
 console.log(months.children);
 console.log(months.childNodes);
 
+// create a new list 
+const lister= document.createElement("li");
+lister.textContent = "Help";
+months.insertAdjacentElement("afterbegin",lister)
+
