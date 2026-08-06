@@ -42,10 +42,59 @@ console.log(element2);
 
 // here i use querySelectorAll to all elements for apply event
 
-const childs = document.querySelectorAll(".child");
-childs.forEach((child)=>{
-    child.addEventListener('click',()=>{
-        child.textContent="I'm clicked";
-    });
+// const childs = document.querySelectorAll(".child");
+// childs.forEach((child)=>{
+//     child.addEventListener('click',()=>{
+//         child.textContent="I'm clicked";
+//     });
+// });
+
+const parent = document.getElementById("parent");
+console.log(parent.children);
+for(let child of parent.children){
+//    console.log(child);
+     child.addEventListener('click',()=>{
+        child.textContent="I am clicked";
+     })};
+
+// const grandparent=document.getElementById("grandparent");
+// grandparent.addEventListener('click',(e)=>{
+//     console.log(e);
+//     console.log("Grandparent is clicked");
+// },false);
+
+// const parent= document.getElementById("parent");
+// parent.addEventListener('click',()=>{
+//     console.log("Parent is clicked");
+// },false);
+
+// const child = document.getElementById("child");
+// child.addEventListener('click',()=>{
+//     console.log("child is clicked");
+// },true);
+
+// const grandparent=document.getElementById("grandparent");
+// grandparent.addEventListener('click',(e)=>{
+//     console.log(e);
+//     console.log(e.target);
+//     console.log("Grandparent is clicked");
+// });
+
+const parent= document.getElementById("parent");
+parent.addEventListener('click',(e)=>{
+    console.log(e);
+    console.log(e.target);
+    e.stopPropagation();
+    // console.log("Parent is clicked");
 });
 
+const child = document.getElementById("child");
+child.addEventListener('click',(e)=>{
+    console.log(e);
+    // console.log(e.target);
+    // e.stopPropagation();
+    console.log("child is clicked");
+});
+
+// capture phase on hai: Top se down aaoge: Us time per event ko trigger kar diya jayega.
+// caputre phase off hai: Event hai usko down to up (Bubbling phase bolte hai, tabb trigger krte hai)
