@@ -34,7 +34,6 @@ function pickupOrder(Callback){
         Callback();
     },3000);
 }
-
 function deliverOrder(){
     console.log("I am on my way to deliver order");
     setTimeout(()=>{
