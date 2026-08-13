@@ -16,12 +16,14 @@ function placedOrder(orderDetail, Callback){
         Callback();
     },3000)
 }
+
 // now next funtion for preparing food
 function preparingOrder(Callback){
     console.log("Your food preparation started");
     setTimeout(()=>{
         console.log("Your order is now prepared");
-        Callback();
+        orderDetail.status= true;
+        Callback(orderDetail);
     },3000);
 }
 
@@ -40,14 +42,17 @@ function deliverOrder(){
     },3000)
 }
 
-
 // now calling the function 
-placedOrder(orderDetail,()=>{
-    preparingOrder(()=>{
+placedOrder(orderDetail,(orderDetail)=>{
+    preparingOrder(orderDetail,()=>{
         pickupOrder(()=>{
             deliverOrder(()=>{
             })
         })
     })
 });
+
+
+
+
 
