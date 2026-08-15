@@ -6,7 +6,6 @@ const correctanswer={
     q4: "264",
     q5: "Muttiah Muralitharan"
 }
-
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
     const data= new FormData(form);
@@ -17,7 +16,5 @@ form.addEventListener('submit',(e)=>{
             finalScore++;
         }
     }
-
     document.getElementById("out").textContent=`Your score is ${finalScore} out of 5`;
-
 })

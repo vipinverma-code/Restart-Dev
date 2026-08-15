@@ -15,8 +15,11 @@
 // })
 // console.log("Hello World End");
 // Now, I am doing the same thing with the help of chaining
-// fetch("https://api.github.com/users")
+// fetch("https://api.github.com/uses")
 // .then((response)=>{
+//     if(!response.ok){
+//         throw new Error("Data is not present in the server");
+//     }
 //     return response.json();
 // }).then((data)=>{
 //     // console.log(data);
@@ -28,31 +31,55 @@
 //     img.src=userimage.avatar_url;
 //     parent.append(img);
 //     };
+// }).catch((error)=>{
+//     const parent=document.getElementById("first");
+//     parent.textContent=error.message;
 // });
 // console.log("Hello World End");
 
 
-const j1={
-    name: "Rohit",
-    age:30,
-    address: "dwarka",
-    c:undefined,
-}
-// the above code is js object now convert it into json
-const jsonformat= JSON.stringify(j1);
-console.log(jsonformat);
-
-// now write the json format
-const jsonFormat = `{
-    "name":"Vipin Verma",
-    "age":22,
-    "address":"lmp",
-    "profession":"developer & entrepreneur"
-}`;
-console.log(typeof(jsonFormat));
-// now convert it into js object
-const JsObject=JSON.parse(jsonFormat);
-console.log(JsObject);
-console.log(typeof (JsObject));
 
 
+// concept of json and js object
+
+// const j1={
+//     name: "Rohit",
+//     age:30,
+//     address: "dwarka",
+//     c:undefined,
+// }
+// // the above code is js object now convert it into json
+// const jsonformat= JSON.stringify(j1);
+// console.log(jsonformat);
+
+// // now write the json format
+// const jsonFormat = `{
+//     "name":"Vipin Verma",
+//     "age":22,
+//     "address":"lmp",
+//     "profession":"developer & entrepreneur"
+// }`;
+// console.log(typeof(jsonFormat));
+// // now convert it into js object
+// const JsObject=JSON.parse(jsonFormat);
+// console.log(JsObject);
+// console.log(typeof (JsObject));
+
+
+
+// Now I am going to learn about how to create promises
+
+const p1= new Promise((resolve,reject)=>{
+    resolve("hello")
+    // reject("hello");
+    // here reject("hello") gives error unhandeled rejection
+});
+// console.log(p1);
+p1.then((response)=>{
+    console.log(response);
+
+}).catch((error)=>{
+    console.log(error);
+})
+
+// now we will learn how to reolve the issue of callback hell
