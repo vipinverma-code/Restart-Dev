@@ -107,8 +107,6 @@ function pickupOrder(orderDetail){
     console.log(`Delivery boy is on way to pickup order from ${orderDetail.restaurant_location} `);
     
     return new Promise((resolve,reject)=>{
-
-
         setTimeout(()=>{
          if(Math.random()>0.05){   
         console.log("I have picked up the order");
@@ -134,9 +132,8 @@ function deliverOrder(orderDetail){
         resolve(orderDetail);
     },3000)
     })
-    
+  
 }
-
 async function ordering(){
     try{
     const response1= await placedOrder(orderDetail);
@@ -148,8 +145,6 @@ async function ordering(){
     catch(error){
         console.log("Error:" ,error)
     }
-
-
 }
 ordering();
 
