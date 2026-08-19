@@ -2,16 +2,24 @@
 //     className:"element",
 //     id:"first"
 // }
-function createElement(tag,attributes,children){
-   const element= document.createElement(tag);
+
+const React={
+    createElement:function(tag,attributes,children){
+        const element= document.createElement(tag);
    element.textContent= children;
    for(const key in attributes){
-    element[key] = attributes[key];
+    if(key==='style'){
+        Object.assign(element.style, attributes.style);
+    }
+    else{
+        element[key] = attributes[key];
+    }   
 }
 return element;
+    }
 }
-const element1=createElement("h1",{className:"element",id:"first"},"Hello Vipin?");
-const element2=createElement("p",{"id":"para","class":"paragraph"},"Hello , Vipin , you are a good developer");
+const element1=React.createElement("h1",{className:"element",id:"first",style:{fontSize:"30px",backgroundColor:"orange",color:"white"}},"Hello Vipin?");
+const element2=React.createElement("p",{"id":"para","class":"paragraph",style:{fontSize:"20px",backgroundColor:"pink", color:"green"}},"Hello , Vipin , you are a good developer");
 // create a h1 element using js
 // const element1=document.createElement("h1");
 // element1.textContent="Coder Army";
