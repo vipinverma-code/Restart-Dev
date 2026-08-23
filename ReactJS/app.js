@@ -38,9 +38,27 @@ const React={
     }
 }
 
+const ReactDOM= {
+    render:function(reactElement,root){
+        root.innerHTML = '';
+        const element = document.createElement(reactElement.type);
+        const{props}= reactElement;
+        for(const key in props){
+            if(key==='style'){
+                Object.assign(element.style,props.style);
+            }
+            else if(key==='children'){
+                element.textContent = props[key];
+            }
+            else{
+                element[key] = props[key];
+            }
+        }
+        root.append(element);
+    }
+}
 const element1=React.createElement("h1",{className:"element",id:"first",style:{fontSize:"30px",backgroundColor:"orange",color:"white"}},"Hello Vipin?");
 const element2=React.createElement("p",{"id":"para","className":"paragraph",style:{fontSize:"20px",backgroundColor:"pink", color:"green"}},"Hello , Vipin , you are a good developer");
-
 console.log(element1);
 
 
