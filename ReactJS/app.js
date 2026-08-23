@@ -26,47 +26,61 @@
 // }
 
 // Original React
-const React={
-    createElement: function(type,props,children){
-        return{
-            type:type,
-            props:{
-                ...props,
-                children:children
-            }
-        }
-    }
-}
+// const React={
+//     createElement: function(type,props,children){
+//         return{
+//             type:type,
+//             props:{
+//                 ...props,
+//                 children:children
+//             }
+//         }
+//     }
+// }
 
-const ReactDOM= {
-    render:function(reactElement,root){
-        root.innerHTML = '';
-        const element = document.createElement(reactElement.type);
-        const{props}= reactElement;
-        for(const key in props){
-            if(key==='style'){
-                Object.assign(element.style,props.style);
-            }
-            else if(key==='children'){
-                element.textContent = props[key];
-            }
-            else{
-                element[key] = props[key];
-            }
-        }
-        root.append(element);
-    }
-}
+// const reactElement={
+//     type:'h1',
+//     props:{
+//         className:"element",
+//         id:"first",
+//         style:{
+//             fontSize:"30px",
+//             backgroundColor:"orange",
+//             color:"white",
+//             children:"Hello Coder Army"
+//         }
+
+//     }
+// }
+// const ReactDOM= {
+//     render:function(reactElement,root){
+//         root.innerHTML = '';
+//         const element = document.createElement(reactElement.type);
+//         const{props}= reactElement;
+//         for(const key in props){
+//             if(key==='style'){
+//                 Object.assign(element.style,props.style);
+//             }
+//             else if(key==='children'){
+//                 element.textContent = props[key];
+//             }
+//             else{
+//                 element[key] = props[key];
+//             }
+//         }
+//         root.append(element);
+//     }
+// }
 const element1=React.createElement("h1",{className:"element",id:"first",style:{fontSize:"30px",backgroundColor:"orange",color:"white"}},"Hello Vipin?");
 const element2=React.createElement("p",{"id":"para","className":"paragraph",style:{fontSize:"20px",backgroundColor:"pink", color:"green"}},"Hello , Vipin , you are a good developer");
 console.log(element1);
 
-
-
-
-
-
-
+const div = React.createElement('div',null,element1,element2,"Hello Coders");
+console.log(div);
+// ReactDOM.render(element1,document.getElementById('root'));
+// ReactDOM.render(element2,document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(div);
 // create a h1 element using js
 // const element1=document.createElement("h1");
 // element1.textContent="Coder Army";
@@ -84,12 +98,10 @@ console.log(element1);
 // element2.style.backgroundColor="pink";
 // element2.style.color="green";
 // Now i have to connect this element with the dom
-const root= document.getElementById('root');
+// const root= document.getElementById('root');
 // ReactDOM.render(element1,root);
 // ReactDOM.render(element2,root);
 // root.append(element1);
 // root.append(element2);
 // Create a parent element
-
-
 
