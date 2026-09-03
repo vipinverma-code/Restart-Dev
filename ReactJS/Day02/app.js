@@ -24,7 +24,27 @@
 
 
 // JSX: Javascript XML: Look like HTML
+// JSX ---> React.createElement() --> React Element(JS object)----> Real DOM (HTML Element)
+// const element= <h1 id="title">Hello Developers!, how are you</h1> --->React.createElement('h1',{id:'title'}, "Hello Developers")--->{type:"h1",props:{id:"tile",children:"hello developers"}}---><h1 id="title">Hello Developers!, how are you</h1>
 
 const element= <h1 id="title">Hello Developers!, how are you</h1>
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(element);
+
+const element2=(<div>
+  <h1>
+    Hello Vipin!
+  </h1>
+  <h2>
+    hii, what are you currently doing?
+  </h2>
+</div>
+)
+root.render(element2);
+
+// const element3=(
+//     <>
+//     <h1>Hello Vipin!</h1>
+//     <h2>How you are nerd from the childohood in studies</h2>
+//     </>
+// )
