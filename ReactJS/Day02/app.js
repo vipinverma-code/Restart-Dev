@@ -48,3 +48,22 @@ root.render(element2);
 //     <h2>How you are nerd from the childohood in studies</h2>
 //     </>
 // )
+
+// React Component
+
+function App(){
+    return(
+        <h1>Hello World Technology!</h1>
+    );
+}
+// root.render only ek argument leta hai, baaki arguments ko ignore kr deta hai error show nhi krta hai
+// root.render(App(),element,element2);
+// root.render(<App/>);
+// dono elements , App function ka data sb ui per aise kr skte hai;
+root.render(
+    <>
+    <App/>
+    {element}
+    {element2}
+    </>
+)
