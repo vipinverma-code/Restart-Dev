@@ -28,8 +28,8 @@
 // const element= <h1 id="title">Hello Developers!, how are you</h1> --->React.createElement('h1',{id:'title'}, "Hello Developers")--->{type:"h1",props:{id:"tile",children:"hello developers"}}---><h1 id="title">Hello Developers!, how are you</h1>
 
 const element= <h1 id="title">Hello Developers!, how are you</h1>
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(element);
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(element);
 
 const element2=(<div>
   <h1>
@@ -40,7 +40,7 @@ const element2=(<div>
   </h2>
 </div>
 )
-root.render(element2);
+// root.render(element2);
 
 // const element3=(
 //     <>
@@ -51,18 +51,23 @@ root.render(element2);
 
 // React Component
 
-function App(){
+function App(name){
     return(
-        <h1>Hello World Technology!</h1>
+        <h1>Hello World Technology!{name}</h1>
     );
 }
+const data=App("VipinVerma");
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render only ek argument leta hai, baaki arguments ko ignore kr deta hai error show nhi krta hai
 // root.render(App(),element,element2);
 // root.render(<App/>);
 // dono elements , App function ka data sb ui per aise kr skte hai;
+
 root.render(
     <>
-    <App/>
+    {data}
     {element}
     {element2}
     </>
