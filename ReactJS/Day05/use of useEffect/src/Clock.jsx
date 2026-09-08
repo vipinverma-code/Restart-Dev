@@ -1,26 +1,31 @@
 import { useEffect, useState } from "react";
-function Clock(){
-    const [time,setTime] = useState(new Date().toLocaleTimeString());
-    const [show,setShow] = useState(true);
-    useEffect(()=>{
-           setInterval(() => {
-             setTime(new Date().toLocaleString());
-             console.log("hello");
-           }, 1000);
 
-    },[])
-    // here in useEffect [], it is a empty dependency array.
+function Clock() {
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
 
-    // setInterval(()=>{
-    //     setTime(new Date().toLocaleString());
-    //     console.log("hello");
-    // },1000)
-    return(
-        <>
-        <h1>Current Time:{time} </h1>
-        <button onClick={()=>setShow(!show)}>{{show?"hide":"show"}}</button>
-        </>
-    )
+  const [show, setShow] = useState(true);
+
+  useEffect(() => {
+    if (!show) {
+      return;
+    }
+
+    const intervalId = setInterval(() => {
+      setTime(new Date().toLocaleTimeString());
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [show]);
+
+  return (
+    <>
+      {show && <h1>Current Time: {time}</h1>}
+
+      <button onClick={() => setShow(!show)}>{show ? "Hide" : "Show"}</button>
+    </>
+  );
 }
 
 export default Clock;
