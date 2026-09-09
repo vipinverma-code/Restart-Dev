@@ -1,12 +1,14 @@
 import { useState } from "react";
-function App(){
+function Counter(){
   let[count,setCount]=useState(0);
-  console.log("App");
+  console.log("Counter");
 
   function handleIncrement(){
     // count++;
     setCount(count+1);
+    // setCount([...count,60]);
   }
+// non-primitive data types me ui ki state reference ke basis per change hoti hai
 
   function handleDecrement(){
     // count--;
@@ -14,11 +16,11 @@ function App(){
   }
     return (
       <>
-        <p>This is the counter for react App </p>
+        <p>This is the counter Application for me</p>
         <h1>Counter:{count}</h1>
         <button onClick={handleIncrement}>Increment</button>
         <button onClick={handleDecrement}>Decrement</button>
       </>
     );
 }
-export default App;
+export default Counter;
