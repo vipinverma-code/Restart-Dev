@@ -2,14 +2,13 @@ import { useState } from "react";
 function Counter(){
   let[count,setCount]=useState(0);
   console.log("Counter");
-
+  
   function handleIncrement(){
     // count++;
     setCount(count+1);
     // setCount([...count,60]);
   }
 // non-primitive data types me ui ki state reference ke basis per change hoti hai
-
   function handleDecrement(){
     // count--;
     setCount(count-1);
